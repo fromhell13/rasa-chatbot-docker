@@ -13,7 +13,7 @@ responses:
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
-    image: "https://i.imgflip.com/syi19.jpg"
+    image: "https://thinkingmeme.com/wp-content/uploads/2017/08/Top-25-funny-face-pictures1.jpg"
 
   utter_did_that_help:
   - text: "Did that help you?"
