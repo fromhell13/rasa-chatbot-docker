@@ -16,7 +16,7 @@ responses:
     image: "https://image.shutterstock.com/image-photo/indy-musician-guitarist-pug-dogfunny-260nw-688080844.jpg"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+  - text: "Did that help you ya?"
 
   utter_happy:
   - text: "Great, carry on!"
