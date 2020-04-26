@@ -19,7 +19,7 @@ responses:
   - text: "Did that help you ya?"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "Bagus la kalau gitu"
 
   utter_goodbye:
   - text: "Bye"
