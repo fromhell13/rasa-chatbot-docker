@@ -13,7 +13,7 @@ responses:
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
-    image: "https://thinkingmeme.com/wp-content/uploads/2017/08/Top-25-funny-face-pictures1.jpg"
+    image: "https://image.shutterstock.com/image-photo/indy-musician-guitarist-pug-dogfunny-260nw-688080844.jpg"
 
   utter_did_that_help:
   - text: "Did that help you?"
