@@ -8,7 +8,7 @@
 * greet
   - utter_greet
 * mood_unhappy
-  - utter_cheer_up
+  - action_joke
   - utter_did_that_help
 * affirm
   - utter_happy
@@ -17,7 +17,7 @@
 * greet
   - utter_greet
 * mood_unhappy
-  - utter_cheer_up
+  - action_joke
   - utter_did_that_help
 * deny
   - utter_goodbye
