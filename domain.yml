@@ -1,11 +1,9 @@
 intents:
   - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+
+actions:
+  - action_joke
+  - action_validate_start
 
 responses:
   utter_greet:
