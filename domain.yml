@@ -1,30 +1,34 @@
-intents:
-  - greet
-
-actions:
-  - action_joke
-  - action_validate_start
-
-responses:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://image.shutterstock.com/image-photo/indy-musician-guitarist-pug-dogfunny-260nw-688080844.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you ya?"
-
-  utter_happy:
-  - text: "Wow! Good to hear that."
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- greet
+slots:
+  isvalidstart:
+    type: categorical
+    values:
+    - sayhi
+    - validmoviecode
+    - invalid
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_happy:
+  - text: Wow! Good to hear that.
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_main_menu:
+  - text: Hi, you are in main menu
+  utter_movie_info:
+  - text: You are in movie info
+actions:
+- action_joke
+- action_validate_start
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_main_menu
+- utter_movie_info
