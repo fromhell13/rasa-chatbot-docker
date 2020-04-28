@@ -22,7 +22,6 @@ responses:
   utter_movie_info:
   - text: You are in movie info
 actions:
-- action_joke
 - action_validate_start
 - utter_greet
 - utter_happy
