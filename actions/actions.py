@@ -20,12 +20,4 @@ class ActionValidateStart(Action):
     return "action_validate_start"
 
   def run(self, dispatcher, tracker, domain):
-    message = tracker.latest_message.get('text')
-    returnSlot = None
-
-    if message.lower() == 'hi':
-        returnSlot = 'sayhi'
-    else:
-        returnSlot = 'validmoviecode'
-        
-    return [SlotSet('isvalidstart', returnSlot)]
+    return [SlotSet('isvalidstart', 'validmoviecode')]
