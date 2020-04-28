@@ -20,7 +20,12 @@ class ActionValidateStart(Action):
     return "action_validate_start"
 
   def run(self, dispatcher, tracker, domain):
-    request = requests.get('http://api.icndb.com/jokes/random').json()  # make an api call
-    joke = request['value']['joke']  # extract a joke from returned json response
-    dispatcher.utter_message(text=joke)  # send the message back to the user
-    return []
+    message = tracker.latest_message.get('text')
+    returnSlot = None
+
+    if message.lower() == 'hi':
+        returnSlot = 'sayhi'
+    else:
+        returnSlot = 'validmoviecode'
+        
+    return [SlotSet('isvalidstart', returnSlot)]

@@ -1,4 +1,5 @@
 version: '3.4'
 services:
   app:
+    restart: always
     image: fromhell13/rasa-action:latest
