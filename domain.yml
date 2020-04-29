@@ -10,12 +10,19 @@ slots:
     - sayhi
     - validmoviecode
     - invalid
+  isvalidmoviecode:
+    type: categorical
+    values:
+    - validmoviecode
+    - invalid
   movieimage:
     type: unfeaturized
   movieprice:
     type: unfeaturized
   movietitle:
     type: unfeaturized
+  moviejson:
+    type: list
 responses:
   utter_greet:
   - text: Hey! How are you?
