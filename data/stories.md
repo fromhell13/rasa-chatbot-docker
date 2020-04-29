@@ -8,4 +8,10 @@
 * greet
   - action_validate_start
   - slot{"isvalidstart" : "validmoviecode"}
-  - utter_movie_info
+
+## sad path 01
+* greet
+  - action_validate_start
+  - slot{"isvalidstart" : "invalid"}
+  - utter_invalid_start
+  - utter_main_menu

@@ -24,10 +24,12 @@ responses:
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
   utter_main_menu:
-  - text: Hi, you are in main menu
+  - text: Hi, welcome to Astro NJOI. <br>Please type 1 to buy movie
   utter_movie_info:
   - text: You are in movie info {movietitle}
     image: '{image_url}'
+  utter_invalid_start:
+  - text: Oops. We can't understand your input
 actions:
 - action_validate_start
 - utter_greet
@@ -35,3 +37,4 @@ actions:
 - utter_iamabot
 - utter_main_menu
 - utter_movie_info
+- utter_invalid_start
