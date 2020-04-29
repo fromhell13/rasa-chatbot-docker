@@ -42,7 +42,6 @@ responses:
   utter_wrong_movie_code:
   - text: Oops. Movie code is invalid. Please try again
 actions:
-- action_validate_start
 - utter_greet
 - utter_happy
 - utter_iamabot
