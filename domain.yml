@@ -10,11 +10,11 @@ slots:
     - sayhi
     - validmoviecode
     - invalid
+  movieimage:
+    type: unfeaturized
   movieprice:
     type: unfeaturized
   movietitle:
-    type: unfeaturized
-  movieimage:
     type: unfeaturized
 responses:
   utter_greet:
@@ -27,6 +27,7 @@ responses:
   - text: Hi, you are in main menu
   utter_movie_info:
   - text: You are in movie info {movietitle}
+    image: '{image_url}'
 actions:
 - action_validate_start
 - utter_greet
