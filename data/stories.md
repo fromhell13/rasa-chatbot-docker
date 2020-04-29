@@ -3,6 +3,7 @@
   - action_validate_start
   - slot{"isvalidstart" : "sayhi"}
   - utter_main_menu
+* enter_movie_code
 
 ## happy path 02
 * greet
