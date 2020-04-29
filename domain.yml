@@ -14,6 +14,8 @@ slots:
     type: unfeaturized
   movietitle:
     type: unfeaturized
+  movieimage:
+    type: unfeaturized
 responses:
   utter_greet:
   - text: Hey! How are you?
