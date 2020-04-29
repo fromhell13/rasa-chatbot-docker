@@ -26,7 +26,7 @@ responses:
   utter_main_menu:
   - text: Hi, you are in main menu
   utter_movie_info:
-  - text: You are in movie info
+  - text: You are in movie info {movietitle}
 actions:
 - action_validate_start
 - utter_greet
