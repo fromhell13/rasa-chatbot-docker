@@ -10,6 +10,10 @@ slots:
     - sayhi
     - validmoviecode
     - invalid
+  movieprice:
+    type: unfeaturized
+  movietitle:
+    type: unfeaturized
 responses:
   utter_greet:
   - text: Hey! How are you?
