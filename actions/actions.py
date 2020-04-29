@@ -26,7 +26,7 @@ class ActionValidateStart(Action):
 
 def validateMovieCode(message):
     valid = False
-    response = requests.get('http://localhost:3000/api/movies/validate/{}'.format(message))
+    response = requests.get('http://a8525840.ngrok.io/api/movies/validate/{}'.format(message))
     if response.status_code == 200:
         resp_json = response.json()
         movietitle = resp_json['data'][0]['title']
