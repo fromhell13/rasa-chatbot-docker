@@ -3,26 +3,27 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - greet
+- enter_movie_code
 slots:
+  isvalidmoviecode:
+    type: categorical
+    values:
+    - validmoviecode
+    - invalid
   isvalidstart:
     type: categorical
     values:
     - sayhi
     - validmoviecode
     - invalid
-  isvalidmoviecode:
-    type: categorical
-    values:
-    - validmoviecode
-    - invalid
   movieimage:
     type: unfeaturized
+  moviejson:
+    type: list
   movieprice:
     type: unfeaturized
   movietitle:
     type: unfeaturized
-  moviejson:
-    type: list
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -31,12 +32,15 @@ responses:
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
   utter_main_menu:
-  - text: Hi, welcome to Astro NJOI. <br>Please type 1 to buy movie
+  - text: 'Hi, welcome to Astro NJOI movie purchase service. Please type MOVIECODE
+      (eg: JUM3) to purchase'
   utter_movie_info:
   - text: You are in movie info {movietitle}
     image: '{image_url}'
   utter_invalid_start:
   - text: Oops. We can't understand your input
+  utter_wrong_movie_code:
+  - text: Oops. Movie code is invalid. Please try again
 actions:
 - action_validate_start
 - utter_greet
@@ -45,3 +49,5 @@ actions:
 - utter_main_menu
 - utter_movie_info
 - utter_invalid_start
+- action_validate_movie
+- utter_wrong_movie_code
