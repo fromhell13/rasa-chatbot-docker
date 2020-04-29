@@ -13,7 +13,6 @@
   - slot{"isvalidstart" : "validmoviecode"}
   - action_validate_movie
 
-
 ## sad path 01
 * greet
   - action_validate_start
@@ -29,3 +28,4 @@
 * enter_movie_code
   - action_validate_movie
   - slot{"isvalidmoviecode" : "invalid"}
+  - utter_wrong_movie_code
