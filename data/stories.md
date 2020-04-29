@@ -29,3 +29,15 @@
   - action_validate_movie
   - slot{"isvalidmoviecode" : "invalid"}
   - utter_wrong_movie_code
+
+## New Story
+
+* greet
+    - action_validate_start
+    - slot{"isvalidstart" : "sayhi"}
+    - utter_main_menu
+* enter_movie_code
+    - action_validate_movie
+    - slot{"isvalidmoviecode":"invalid"}
+    - slot{"moviejson":null}
+    - utter_wrong_movie_code
