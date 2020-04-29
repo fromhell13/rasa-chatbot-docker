@@ -1,43 +1,25 @@
 ## happy path 01
 * greet
-  - action_validate_start
-  - slot{"isvalidstart" : "sayhi"}
   - utter_main_menu
 * enter_movie_code
   - action_validate_movie
   - slot{"isvalidmoviecode" : "validmoviecode"}
 
 ## happy path 02
-* greet
-  - action_validate_start
-  - slot{"isvalidstart" : "validmoviecode"}
+* enter_movie_code
   - action_validate_movie
+  - slot{"isvalidstart" : "validmoviecode"}
 
 ## sad path 01
-* greet
-  - action_validate_start
+* enter_movie_code
+  - action_validate_movie
   - slot{"isvalidstart" : "invalid"}
-  - utter_invalid_start
-  - utter_main_menu
+  - utter_wrong_movie_code
 
 ## sad path 02
 * greet
-  - action_validate_start
-  - slot{"isvalidstart" : "sayhi"}
   - utter_main_menu
 * enter_movie_code
   - action_validate_movie
   - slot{"isvalidmoviecode" : "invalid"}
   - utter_wrong_movie_code
-
-## New Story
-
-* greet
-    - action_validate_start
-    - slot{"isvalidstart" : "sayhi"}
-    - utter_main_menu
-* enter_movie_code
-    - action_validate_movie
-    - slot{"isvalidmoviecode":"invalid"}
-    - slot{"moviejson":null}
-    - utter_wrong_movie_code
