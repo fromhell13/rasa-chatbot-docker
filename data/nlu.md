@@ -10,3 +10,9 @@
 - dar8
 - ter2
 - kuk8
+
+## intent:enter_smartcard
+- 1
+
+## intent:back_mainmenu
+- 00
