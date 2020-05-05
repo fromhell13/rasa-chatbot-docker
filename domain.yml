@@ -4,18 +4,20 @@ session_config:
 intents:
 - greet
 - enter_movie_code
+- enter_smartcard
+- back_mainmenu
 slots:
   isvalidmoviecode:
     type: categorical
     values:
     - validmoviecode
     - invalid
-  isvalidstart:
+  menuoptions:
     type: categorical
     values:
-    - sayhi
-    - validmoviecode
-    - invalid
+    - mainmenu
+    - moviecodemenu
+    - smcmenu
   movieimage:
     type: unfeaturized
   moviejson:
@@ -35,12 +37,16 @@ responses:
   - text: 'Hi, welcome to Astro NJOI movie purchase service. Please type MOVIECODE
       (eg: JUM3) to purchase'
   utter_movie_info:
-  - text: You are in movie info {movietitle}
+  - text: 'Here your movie purchase summary. Film: {movietitle}. Price: RM{movieprice}.
+      Type 1 - Buy Now. Type 00 - Main Menu'
     image: '{image_url}'
   utter_invalid_start:
   - text: Oops. We can't understand your input
   utter_wrong_movie_code:
   - text: Oops. Movie code is invalid. Please try again
+  utter_ask_smartcard:
+  - text: Please key-in your Smartcard Number (eg 012345678912). You can find your
+      Smartcard Number at CH480 & CH481. Type 0 - Go Back. Type 00 - Main Menu
 actions:
 - utter_greet
 - utter_happy
@@ -50,3 +56,4 @@ actions:
 - utter_invalid_start
 - action_validate_movie
 - utter_wrong_movie_code
+- utter_ask_smartcard
