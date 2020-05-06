@@ -14,5 +14,5 @@
 ## intent:enter_smartcard
 - 1
 
-## intent:back_mainmenu
+## intent:menu_movie
 - 00

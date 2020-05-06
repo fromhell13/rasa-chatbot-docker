@@ -2,10 +2,13 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- menu_movie
+- back_main_menu
 - greet
 - enter_movie_code
 - enter_smartcard
-- back_mainmenu
+entities:
+- menuoptions
 slots:
   isvalidmoviecode:
     type: categorical
@@ -57,3 +60,5 @@ actions:
 - action_validate_movie
 - utter_wrong_movie_code
 - utter_ask_smartcard
+- action_validate_smc
+- action_validate_menu_options
