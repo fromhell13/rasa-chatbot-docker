@@ -35,6 +35,12 @@ slots:
     type: unfeaturized
   movietitle:
     type: unfeaturized
+  smcic:
+    type: unfeaturized
+  smcname:
+    type: unfeaturized
+  smcnumber:
+    type: unfeaturized
 responses:
   utter_greet:
   - text: Hey! How are you?
