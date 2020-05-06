@@ -4,8 +4,12 @@
 * enter_movie_code
   - action_validate_movie
   - slot{"isvalidmoviecode" : "validmoviecode"}
-* enter_smartcard
+* menu_movie
+  - action_validate_menu_options
+  - slot{"menuoptions":"smcmenu"}
   - utter_ask_smartcard
+* key_in_smartcard
+  - action_validate_smc
 
 ## happy path 02
 * enter_movie_code
@@ -26,11 +30,12 @@
   - slot{"isvalidmoviecode" : "invalid"}
   - utter_wrong_movie_code
 
-## happy path but with back to main menu
-* greet
+## back to main menu
+* menu_movie
+  - action_validate_menu_options
+  - slot{"menuoptions":"mainmenu"}
   - utter_main_menu
-* enter_movie_code
-  - action_validate_movie
-  - slot{"isvalidmoviecode" : "validmoviecode"}
-* back_mainmenu
-  - utter_main_menu
+
+## Enter SmartCard
+* enter_smartcard
+  - utter_ask_smartcard
