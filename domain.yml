@@ -7,6 +7,7 @@ intents:
 - greet
 - enter_movie_code
 - enter_smartcard
+- key_in_smartcard
 entities:
 - menuoptions
 slots:
@@ -14,6 +15,11 @@ slots:
     type: categorical
     values:
     - validmoviecode
+    - invalid
+  isvalidsmc:
+    type: categorical
+    values:
+    - validsmc
     - invalid
   menuoptions:
     type: categorical
@@ -50,6 +56,10 @@ responses:
   utter_ask_smartcard:
   - text: Please key-in your Smartcard Number (eg 012345678912). You can find your
       Smartcard Number at CH480 & CH481. Type 0 - Go Back. Type 00 - Main Menu
+  utter_purchase_summary:
+  - text: 'Akaun: {smcnumber}. Nama: {smcname}. ID: {smcic}'
+  utter_invalid_smc:
+  - text: Oops. Invalid Smartcard. Please try again
 actions:
 - utter_greet
 - utter_happy
@@ -62,3 +72,5 @@ actions:
 - utter_ask_smartcard
 - action_validate_smc
 - action_validate_menu_options
+- utter_purchase_summary
+- utter_invalid_smc
