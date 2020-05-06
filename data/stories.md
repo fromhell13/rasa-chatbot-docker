@@ -10,6 +10,8 @@
   - utter_ask_smartcard
 * key_in_smartcard
   - action_validate_smc
+  - slot{"isvalidsmc":"validsmc"}
+  - utter_purchase_summary
 
 ## happy path 02
 * enter_movie_code
@@ -39,3 +41,9 @@
 ## Enter SmartCard
 * enter_smartcard
   - utter_ask_smartcard
+
+## invalid smc
+* key_in_smartcard
+  - action_validate_smc
+  - slot{"isvalidsmc":"invalid"}
+  - utter_invalid_smc
