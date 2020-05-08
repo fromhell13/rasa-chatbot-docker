@@ -66,6 +66,8 @@ responses:
   - text: 'Akaun: {smcnumber}. Nama: {smcname}. ID: {smcic}'
   utter_invalid_smc:
   - text: Oops. Invalid Smartcard. Please try again
+  utter_test_response:
+  - text: Hi, I'm testing
 actions:
 - utter_greet
 - utter_happy
@@ -80,3 +82,4 @@ actions:
 - action_validate_menu_options
 - utter_purchase_summary
 - utter_invalid_smc
+- utter_test_response

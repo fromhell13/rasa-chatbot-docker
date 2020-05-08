@@ -1,6 +1,7 @@
 ## happy path 01
 * greet
   - utter_main_menu
+  - utter_test_response
 * enter_movie_code
   - action_validate_movie
   - slot{"isvalidmoviecode" : "validmoviecode"}
