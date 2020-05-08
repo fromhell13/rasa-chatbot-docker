@@ -16,3 +16,6 @@
 
 ## intent:menu_movie
 - 00
+
+## intent:key_in_smartcard
+- 016404797985
