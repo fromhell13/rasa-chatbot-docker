@@ -2,14 +2,45 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- menu_movie
+- back_main_menu
 - greet
+- enter_movie_code
+- enter_smartcard
+- key_in_smartcard
+entities:
+- menuoptions
 slots:
-  isvalidstart:
+  isvalidmoviecode:
     type: categorical
     values:
-    - sayhi
     - validmoviecode
     - invalid
+  isvalidsmc:
+    type: categorical
+    values:
+    - validsmc
+    - invalid
+  menuoptions:
+    type: categorical
+    values:
+    - mainmenu
+    - moviecodemenu
+    - smcmenu
+  movieimage:
+    type: unfeaturized
+  moviejson:
+    type: list
+  movieprice:
+    type: unfeaturized
+  movietitle:
+    type: unfeaturized
+  smcic:
+    type: unfeaturized
+  smcname:
+    type: unfeaturized
+  smcnumber:
+    type: unfeaturized
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -18,17 +49,37 @@ responses:
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
   utter_main_menu:
-  - text: Hi, you are in main menu
+  - text: 'Hi, welcome to Astro NJOI movie purchase service. Please type MOVIECODE
+      (eg: JUM3) to purchase'
   utter_movie_info:
-  - text: You are in movie info
+  - text: 'Here your movie purchase summary. Film: {movietitle}. Price: RM{movieprice}.
+      Type 1 - Buy Now. Type 00 - Main Menu'
+    image: '{image_url}'
+  utter_invalid_start:
+  - text: Oops. We can't understand your input
+  utter_wrong_movie_code:
+  - text: Oops. Movie code is invalid. Please try again
+  utter_ask_smartcard:
+  - text: Please key-in your Smartcard Number (eg 012345678912). You can find your
+      Smartcard Number at CH480 & CH481. Type 0 - Go Back. Type 00 - Main Menu
+  utter_purchase_summary:
+  - text: 'Akaun: {smcnumber}. Nama: {smcname}. ID: {smcic}'
+  utter_invalid_smc:
+  - text: Oops. Invalid Smartcard. Please try again
+  utter_test_response:
+  - text: Hi, I'm testing
 actions:
-- action_joke
-- action_validate_start
 - utter_greet
-- utter_cheer_up
-- utter_did_that_help
 - utter_happy
-- utter_goodbye
 - utter_iamabot
 - utter_main_menu
 - utter_movie_info
+- utter_invalid_start
+- action_validate_movie
+- utter_wrong_movie_code
+- utter_ask_smartcard
+- action_validate_smc
+- action_validate_menu_options
+- utter_purchase_summary
+- utter_invalid_smc
+- utter_test_response
